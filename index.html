@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#6ba9ff">
   <title>MusicVerse Adventure</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
   <link rel="stylesheet" href="./style.css">
   <script type="importmap">
     {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}
@@ -14,7 +15,7 @@
   <div id="game">
     <canvas id="world"></canvas>
     <header class="topbar">
-      <div class="brand"><span class="brand-icon">♫</span><div><strong>MusicVerse</strong><small>ADVENTURE WORLD</small></div></div>
+      <a class="brand" href="./index.html" aria-label="MusicVerse Adventure home"><img src="./logo.svg" alt="MusicVerse Adventure logo"></a>
       <div class="player-chip"><span class="avatar-dot">✦</span><span>Music Explorer</span><b id="level">Lv. 1</b></div>
       <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">♫</button>
     </header>
@@ -53,7 +54,7 @@
 
     <div class="welcome-overlay" id="welcome">
       <div class="welcome-card glass">
-        <div class="welcome-logo">♫</div>
+        <div class="welcome-logo"><img src="./favicon.svg" alt="MusicVerse music note logo"></div>
         <div class="eyebrow">A LITTLE WORLD OF MUSIC</div>
         <h1>Welcome to<br><span>MusicVerse</span></h1>
         <p>Jelajahi dunia fantasi, temukan instrumen, selesaikan misi, dan kumpulkan bintang musik!</p>

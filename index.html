@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6ba9ff">
+  <title>MusicVerse Adventure</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"}}
+  </script>
+</head>
+<body>
+  <div id="game">
+    <canvas id="world"></canvas>
+    <header class="topbar">
+      <div class="brand"><span class="brand-icon">♫</span><div><strong>MusicVerse</strong><small>ADVENTURE WORLD</small></div></div>
+      <div class="player-chip"><span class="avatar-dot">✦</span><span>Music Explorer</span><b id="level">Lv. 1</b></div>
+      <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">♫</button>
+    </header>
+
+    <aside class="quest-card glass">
+      <div class="eyebrow">YOUR ADVENTURE</div>
+      <h2 id="questTitle">Welcome to Melody Town!</h2>
+      <p id="questText">Jelajahi plaza dan temui Lila untuk memulai petualangan musikmu.</p>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <div class="quest-bottom"><span id="questProgress">0 / 3 missions</span><span class="reward">✦ <b id="xp">0</b> XP</span></div>
+      <button class="primary-btn" id="questBtn">Lihat Misi <span>↗</span></button>
+    </aside>
+
+    <div class="stats glass">
+      <div><span class="stat-icon coin">●</span><div><b id="coins">0</b><small>COINS</small></div></div>
+      <div><span class="stat-icon star">★</span><div><b id="stars">0</b><small>STARS</small></div></div>
+    </div>
+
+    <div class="zone-label glass"><span class="zone-pip"></span><div><small>YOU ARE EXPLORING</small><b>Melody Town</b></div></div>
+
+    <div class="interaction-hint" id="hint"><kbd>E</kbd> Interaksi</div>
+
+    <nav class="bottom-nav glass">
+      <button class="nav-item active" data-panel="world"><span>⌂</span><small>World</small></button>
+      <button class="nav-item" data-panel="missions"><span>☷</span><small>Missions</small></button>
+      <button class="nav-item" data-panel="wardrobe"><span>♧</span><small>Style</small></button>
+      <button class="nav-item" data-panel="music"><span>♫</span><small>Music Lab</small></button>
+    </nav>
+
+    <section class="modal hidden" id="panel">
+      <div class="modal-card glass">
+        <button class="close-btn" id="closePanel">×</button>
+        <div id="panelContent"></div>
+      </div>
+    </section>
+
+    <div class="welcome-overlay" id="welcome">
+      <div class="welcome-card glass">
+        <div class="welcome-logo">♫</div>
+        <div class="eyebrow">A LITTLE WORLD OF MUSIC</div>
+        <h1>Welcome to<br><span>MusicVerse</span></h1>
+        <p>Jelajahi dunia fantasi, temukan instrumen, selesaikan misi, dan kumpulkan bintang musik!</p>
+        <div class="welcome-tags"><span>✦ Explore</span><span>♫ Learn</span><span>♡ Create</span></div>
+        <button class="primary-btn wide" id="startBtn">Mulai Petualangan <span>→</span></button>
+        <small class="controls-note">WASD / tombol panah untuk bergerak · E untuk interaksi</small>
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+  </div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
